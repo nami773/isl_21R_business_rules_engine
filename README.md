@@ -3,11 +3,11 @@ A solution for the coding assignment for ISL21 Full Stack Developer position.
 
 Python 3.11 with paho-mqtt installed is required to run this application.
 
-To get started, set MQTT_TOPIC_ID on line 4 with the actual topic ID.
+To get started, execute `pip install paho-mqtt`
 
-Then, start listening to the input topic by running:
+Then, set `MQTT_TOPIC_ID` on line 4 of main.py with the actual topic ID.
 
-python main.py
+Then, start listening to the input topic by running: `python main.py`
 
 # Test Documentation
 
@@ -19,7 +19,7 @@ python main.py
 
 ### Unit Tests
 To run the unit tests, execute:
-python unit_test.py
+`python unit_test.py`
 
 The unit tests focus on testing two core functions:
 
@@ -41,7 +41,7 @@ The unit tests focus on testing two core functions:
 
 ## Integration Tests
 To run the unit tests, execute:
-python integration_test.py
+`python integration_test.py`
 
 Purpose:
 
