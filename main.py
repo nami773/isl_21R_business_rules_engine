@@ -14,8 +14,13 @@ def validate_input(input_data):
     if type(input_data.get("id")) != str or not input_data.get("id"):
         reasons_of_error.append("'id' field of type string is required.")
 
-    if type(input_data.get("numberOfChildren")) != int or input_data.get("numberOfChildren") < 0:
-        reasons_of_error.append("'numberOfChildren' field of type positive integer is required.")
+    if (
+        type(input_data.get("numberOfChildren")) != int
+        or input_data.get("numberOfChildren") < 0
+    ):
+        reasons_of_error.append(
+            "'numberOfChildren' field of type positive integer is required."
+        )
 
     if input_data.get("familyComposition") not in ["single", "couple"]:
         reasons_of_error.append(
@@ -73,7 +78,6 @@ def start_communication(topic_id):
         print("message received")
         try:
             payload = json.loads(message.payload.decode("utf-8"))
-            # Use the provided topic_id dynamically for the output topic
             output_topic = f"BRE/calculateWinterSupplementOutput/{topic_id}"
             errors = validate_input(payload)
             if errors:
