@@ -40,6 +40,9 @@ The unit tests focus on testing two core functions:
  - Test case 6: Single with 0 children, not eligible
 
 ## Integration Tests
+To run the unit tests, execute:
+python integration_test.py
+
 Purpose:
 
 Test the communication between the MQTT topics and the main.py application, ensuring that messages are correctly sent and received.
